@@ -3,6 +3,7 @@ from pygame.sprite import Sprite
 
 class Alien(Sprite):
     """Класс представляющий врага"""
+
     def __init__(self, ai_settings, screen):
         """Инициализирует пришельца и задает его изначальную позицию"""
         super(Alien, self).__init__()
@@ -19,6 +20,7 @@ class Alien(Sprite):
 
         # сохранение точной позиции пришельца:
         self.x = float(self.rect.x)
+
     def check_edges(self):
         """Возвращение True, если пришелец находится у края экрана"""
         screen_rect = self.screen.get_rect()
@@ -29,7 +31,7 @@ class Alien(Sprite):
 
     def update(self):
         """"Перемещает пришельца влево или вправо"""
-        self.x += (self.ai_settings.aliens_speed_factor * 
+        self.x += (self.ai_settings.alien_speed_factor * 
                 self.ai_settings.fleet_direction)
         self.rect.x = self.x
 
