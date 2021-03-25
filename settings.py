@@ -25,7 +25,7 @@ class Settings():
         self.fleet_drop_speed = 10 
 
         # Темп ускорения игры
-        self.speedup_scale = 1.5
+        self.speedup_scale = 1.1
         
         # Темп роста стоимости пришельцев
         self.score_scale = 1.5
@@ -51,4 +51,3 @@ class Settings():
         self.bullet_speed_factor *= self.speedup_scale
         self.alien_speed_factor *= self.speedup_scale   
         self.alien_points = int(self.alien_points * self.score_scale)
-        print(self.alien_points)

@@ -1,10 +1,13 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
     """Класс модели корабля"""
-
+    # Здесь мы импортируем Sprite, объявляем о наследовании Ship от Sprite  и вы-
+    # зываем super() в начале __init__()
     def __init__(self, ai_settings, screen):
         """Инициализирует корабль и задает его начальную позицию."""
+        super(Ship, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
